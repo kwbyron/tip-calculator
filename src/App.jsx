@@ -2,7 +2,8 @@ import { useState } from "react";
 
 function App() {
   return (
-    <>
+    <div className="content">
+      <h1>SPLITTER</h1>
       <Main>
         <Inputs>
           <Bill />
@@ -10,21 +11,21 @@ function App() {
           <NumberOfPeople />
         </Inputs>
         <Outputs>
-          <TipAmountPerPerson />
-          <TotalPerPerson />
-          <Reset />
+          <Amount />
+          <Amount />
+          <Reset>RESET</Reset>
         </Outputs>
       </Main>
-    </>
+    </div>
   );
 }
 
-function Main() {
-  return <div className="main"></div>;
+function Main({ children }) {
+  return <div className="main">{children}</div>;
 }
 
-function Inputs() {
-  return <div className="inputs-box"></div>;
+function Inputs({ children }) {
+  return <div className="inputs-box">{children}</div>;
 }
 
 function Bill() {
@@ -39,16 +40,21 @@ function NumberOfPeople() {
   return <div className="input-people"></div>;
 }
 
-function Outputs() {
-  return <div className="outputs-box"></div>;
+function Outputs({ children }) {
+  // return <div className="outputs-box"></div>;
+  return <div className="outputs-box">{children}</div>;
 }
 
-function TipAmountPerPerson() {
-  return <div className="output-tip"></div>;
-}
-
-function TotalPerPerson() {
-  return <div className="output-total"></div>;
+function Amount() {
+  return (
+    <div className="output-amount">
+      <div className="output-amount-info">
+        <p>Tip Amount</p>
+        <p>/ person</p>
+      </div>
+      <div className="output-amount-calculated">$0.00</div>
+    </div>
+  );
 }
 
 function Reset() {
