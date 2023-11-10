@@ -270,6 +270,7 @@ h1 {
   color: hsl(183, 100%, 15%);
   font-size: 1.2rem;
   filter: brightness(60%);
+  cursor: pointer;
 }
 
 .btn-reset:hover {

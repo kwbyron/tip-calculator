@@ -16,12 +16,12 @@ function App() {
   function handleSetBill(e) {
     e.preventDefault();
 
-    setBill(Number(e.target.value));
+    setBill(e.target.value);
   }
 
   function handleSetPeople(e) {
     e.preventDefault();
-    setPeople(Number(e.target.value));
+    setPeople(e.target.value);
   }
 
   function handleSetTipPercent(num) {
