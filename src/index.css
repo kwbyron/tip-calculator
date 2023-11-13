@@ -135,6 +135,7 @@ h1 {
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  color: white;
 }
 
 .btn-percent:hover {
